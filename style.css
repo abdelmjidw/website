@@ -1,32 +1,278 @@
-body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    background-image: url(dangerous-alien-planet-surface-with-rocky-surface_107791-17538.avif);
-    backdrop-filter: blur(4px);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-h1{
-    display: inline;
-    color: white;
-    text-shadow: none;
-    transition: all 1s ease;
-}
-h3{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
+body {
     margin: 0;
-    color: rgb(255, 230, 5);
-    opacity: 50%;
-}
-h1:hover{
-    text-shadow: 0px 0px 6px red;
-    color: rgb(64, 222, 64);
-}
-#myCanvas{
-    margin-top: 15px;
-    background-color: black;
-    text-align: center;
-    border-radius: 5px;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(396678-wallpaper-jujutsu-kaisen-satoru-gojo-4k-hd.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+}
+
+li {
+    padding: 5px;
+}
+
+.container>a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    ;
+}
+
+.nom {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    color: rgba(13, 109, 253, 0.744)
+}
+
+.pari {
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    color: #fff;
+}
+
+p {
+    position: absolute;
+    top: 300px;
+    left: 60px;
+    color: #fff;
+    background-color: rgba(8, 74, 173, 0.596);
+    padding: 10px;
+    border-radius: 6px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+button {
+    position: relative;
+    top: 350px;
+    left: 220px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ddd;
+    box-shadow: 0 0 8px black;
+    background-color: rgb(8, 74, 173);
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: rgb(191, 65, 34);
+}
+
+/* anime */
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+#an {
+    background-image: url(anime-crossover.jpeg);
+    display: flex;
+    align-items: center;
+
+}
+
+.container2 {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.slide_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+}
+
+img {
+    position: relative;
+    height: 370px;
+    width: 240px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.button {
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#slider1:target~.imgContainer #img1,
+#slider1:target~.imgContainer #button1 {
+    width: 390px;
+    height: 550px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider2:target~.imgContainer #img2,
+#slider2:target~.imgContainer #button2 {
+    width: 390px;
+    height: 550px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider3:target~.imgContainer #img3,
+#slider3:target~.imgContainer #button3 {
+    width: 390px;
+    height: 550px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider4:target~.imgContainer #img4,
+#slider4:target~.imgContainer #button4 {
+    width: 390px;
+    height: 550px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider5:target~.imgContainer #img5,
+#slider5:target~.imgContainer #button5 {
+    width: 390px;
+    height: 550px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider6:target~.imgContainer #img6,
+#slider6:target~.imgContainer #button6 {
+    width: 390px;
+    height: 550px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider7:target~.imgContainer #img7,
+#slider7:target~.imgContainer #button7 {
+    width: 390px;
+    height: 550px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+
+#slider1:target~.imgContainer {
+    left: 60%;
+}
+
+#slider2:target~.imgContainer {
+    left: 40%;
+}
+
+#slider3:target~.imgContainer {
+    left: 20%;
+}
+
+#slider4:target~.imgContainer {
+    left: 0%;
+}
+
+#slider5:target~.imgContainer {
+    left: -20%;
+}
+
+#slider6:target~.imgContainer {
+    left: -40%;
+}
+
+#slider7:target~.imgContainer {
+    left: -60%;
+}
+
+#ski {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 0 0 7px rgb(13 110 253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+#ski :hover {
+    color: brown;
+    transform: rotate(6deg) scale(1.3);
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        height: auto;
+    }
+
+    .navbar-nav {
+        margin: 0;
+    }
+    .nom{
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: 20px;
+        margin-left: 40px;
+    }
+    .pari,
+    p,
+    button {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: table;
+        font-size: medium;
+        margin-left: 40PX;
+
+    }
+
+    .imgContainer {
+        height: auto;
+    }
+
+    img {
+        height: 250px;
+        width: 180px;
+    }
+
+    .button {
+        width: 180px;
+        height: 250px;
+        
+    }
+
+    /* Adjust font size for smaller screens */
+    footer .foot a {
+        font-size: 20px;
+    }
+}
