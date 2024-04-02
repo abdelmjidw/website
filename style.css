@@ -1,8 +1,16 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
     overflow-x: hidden;
+    background: rgb(9, 9, 121);
+    background: linear-gradient(256deg, rgba(9, 9, 121, 1) 0%, rgba(9, 15, 125, 1) 21%, rgba(8, 34, 138, 1) 46%, rgba(5, 95, 178, 1) 75%, rgba(0, 212, 255, 1) 100%);
 }
 
 header {
@@ -12,10 +20,42 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
+
+}
+
+.container {
+    position: fixed;
+    margin-left: 50px;
+    top: 10px;
+    z-index: 1;
 }
 
 li {
     padding: 5px;
+
+}
+
+.icons a i {
+    position: relative;
+    padding: 5px;
+    top: 248px;
+    left: 60px;
+    font-size: 25px;
+    background: none;
+    color: #fff;
+
+}
+
+#navbarNav a {
+    color: #fff;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+}
+
+#navbarNav a:hover {
+    color: rgba(13, 109, 253);
+    border-bottom: 1px solid rgb(0, 238, 255);
+
 }
 
 .container>a {
@@ -27,54 +67,162 @@ li {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 900;
     position: absolute;
-    top: 200px;
+    top: 230px;
     left: 60px;
-    color: rgba(13, 109, 253, 0.744)
+    color: rgba(13, 109, 253, 0.744);
+    transition: all 0.5s;
 }
 
-.pari {
+.nom:hover {
+    margin-top: 15px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px black;
+    transform: scale(1.1);
+}
+
+.hi {
+    font-family: cursive;
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 60px;
     color: #fff;
 }
 
-p {
-    position: absolute;
+.me {
+    width: 450px;
+    position: relative;
     top: 300px;
     left: 60px;
     color: #fff;
     background-color: rgba(8, 74, 173, 0.596);
     padding: 10px;
     border-radius: 6px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-button {
+.me::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.596);
+    position: absolute;
+    top: 0;
+    right: -8px;
+    border-radius: 0 5px 5px 0;
+}
+
+.talk {
     position: relative;
-    top: 350px;
+    top: 293px;
     left: 220px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #ddd;
-    box-shadow: 0 0 8px black;
+    padding: 5px 15px;
+    border-radius: 5px 15px;
+    color: rgb(254, 254, 254);
     background-color: rgb(8, 74, 173);
     transition: all 0.5s ease;
 }
 
-button:hover {
-    background-color: rgb(191, 65, 34);
+.talk:hover {
+    box-shadow: 0 0 8px black;
+    background-color: rgb(9, 63, 144);
+    transform: scale(1.1)
+}
+
+
+/* About */
+.cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.card {
+    background-color: rgb(8, 74, 173);
+    width: 370px;
+    height: 470px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 35px;
+    align-items: center;
+    box-shadow: 0 0 10px black;
+    border-radius: 5px 25px;
+    position: relative;
+
+}
+
+.card::after {
+    content: " ";
+    position: absolute;
+    display: flex;
+    width: 170px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d500f9);
+    animation: rotate 4s linear infinite;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 5px;
+
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.about {
+    font-family: "Tac One", sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+
+}
+
+div i {
+    color: #fff;
+    font-size: 25px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    z-index: 1;
+}
+
+.card .mjid {
+    width: 100%;
+    overflow: hidden;
+    height: 81vh;
+    z-index: 1;
+    border-radius: 5px 5px 5px 25px;
+    transition: all 1s ease;
+}
+
+.card .mjid:hover {
+    transform: rotate(10deg) scale(1.6);
+    overflow: hidden;
 }
 
 /* anime */
+
 section {
     width: 100%;
     height: 100vh;
 }
 
-#an {
-    background-image: url(anime-crossover.jpeg);
+.an {
     display: flex;
     align-items: center;
 
@@ -87,6 +235,7 @@ section {
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+
 }
 
 .imgContainer {
@@ -107,7 +256,7 @@ section {
     margin: 0 30px 0 30px;
 }
 
-img {
+.img {
     position: relative;
     height: 370px;
     width: 240px;
@@ -215,64 +364,204 @@ img {
     left: -60%;
 }
 
-#ski {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 0 0 7px rgb(13 110 253);
+/* skills */
+.skills {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 1s ease;
+    top: 5px;
 }
 
-#ski :hover {
-    color: brown;
-    transform: rotate(6deg) scale(1.3);
+.main-text h1 {
+
+    position: absolute;
+    top: 0;
+    left: 42%;
+    font-family: "Tac One", sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+    color: #fff;
+
 }
 
-@media only screen and (max-width: 768px) {
+.skill-main {
+    display: flex;
+    justify-content: center;
+
+}
+
+.skill-bar {
+    background-color: rgb(8, 74, 173);
+    width: 370px;
+    height: 470px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 45px;
+    align-items: center;
+    box-shadow: 0 0 10px black;
+    border-radius: 25px 5px;
+    position: relative;
+}
+
+.info h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 60px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.info h3:hover {
+    color: rgba(13, 109, 253);
+    text-shadow: 0 0 2px rgb(14, 219, 255);
+    transform: scale(1.1);
+}
+
+.info p {
+    background-color: rgba(13, 109, 253);
+    display: flex;
+    border-radius: 10px 35px;
+    color: #fff;
+    padding: 5px 10px;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.info p:hover {
+    box-shadow: 0 0 8px black;
+    background-color: rgba(10, 84, 194, 0.785);
+    transform: scale(1.1)
+}
+
+/* contact */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(204ef20bf4bf64f992391c0c52fcdf29.png);
+    background-size: cover;
+}
+
+.contact form {
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px hsla(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    flex-wrap: wrap;
+
+}
+
+.contact h1 {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 600;
+    width: 500px;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contact form input {
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+
+.contact form input::placeholder {
+    color: #fefdfd;
+}
+
+.contact form #no,
+.contact form #n {
+    margin-left: 20px;
+}
+
+.contact form h4 {
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.contact form textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+
+}
+
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(194, 194, 194, 0.713);
+}
+
+.contact form #button {
+
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 20px;
+    color: #333;
+    width: 500px;
+    padding: 0;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+
+.contact form #button:hover {
+    background-color: #e6e5e5;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px 25px;
+}
+
+footer {
+    background-color: rgba(170, 71, 10, 0.662);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+
+}
+
+  @media only screen and (max-width: 768px) {
     header {
-        height: auto;
+      height: auto;
     }
-
-    .navbar-nav {
-        margin: 0;
+    .container {
+      position: static;
     }
-    .nom{
-        position: relative;
-        top: auto;
-        left: auto;
-        font-size: 20px;
-        margin-left: 40px;
+    .cards {
+      flex-direction: column; 
     }
-    .pari,
-    p,
-    button {
-        position: relative;
-        top: auto;
-        left: auto;
-        display: table;
-        font-size: medium;
-        margin-left: 40PX;
-
+    .skill-bar, .contact form {
+      width: 100%; /
     }
-
-    .imgContainer {
-        height: auto;
-    }
-
-    img {
-        height: 250px;
-        width: 180px;
-    }
-
-    .button {
-        width: 180px;
-        height: 250px;
-        
-    }
-
-    /* Adjust font size for smaller screens */
-    footer .foot a {
-        font-size: 20px;
-    }
-}
+  }
+  

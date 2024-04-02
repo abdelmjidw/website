@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MjidOux</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-  
+
 
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container ">
+    <header id="home">
+        <nav class="navbar navbar-expand-lg  ">
+            <div class="container">
                 <a class="navbar-brand text-light" href="#">MjidOux.</a>
                 <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -24,35 +25,53 @@
                 <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
                     <ul class="navbar-nav ">
                         <li class="nav-item ">
-                            <a class="nav-link active text-primary opacity-75" aria-current="page" href="#">Home</a>
+                            <a class="nav-link " aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link text-light" href="#an">About</a>
+                            <a class="nav-link " href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#ski">Achievement</a>
+                            <a class="nav-link " href="#ski">my skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#cont">Contact</a>
+                            <a class="nav-link " href="#cont">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
+        <section>
             <h1 class="nom">AbdeLmajid Moumni</h1>
-  
-            <h3 class="pari">Frontend Developer</h3>
 
-            <p>Lorem ipsum dolor sit amet<br>  consectetur adipisicing elit. Magni provident quibusdam <br>placeat rerum pariatur a harum tenetur velit non quia tempora  </p>
+            <h3 class="hi">Hello,I'm</h3>
 
-            <button>Let's talk</button>
+            <p class="me"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet atque adipisci porro veritatis
+                eum
+                excepturi ullam! Ad provident, consequuntur consequatur sit obcaecati maxime, voluptate odio delectus
+                reprehenderit autem animi ullam!</p>
+
+            <button class="talk">Let's talk</button>
+            <div class="icons">
+                <a href="https://github.com/abdelmjidw" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/mjid_oux/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCVYzyYYDtCM7-g-KUH9SDKg" target="_blank"><i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+        </section>
     </header>
     <main>
-        <section id="an">
+        <section class="cards" id="about">
+            <h1 class="about">About</h1>
+            <div class="card">
+                <i class="fa-solid fa-user"></i>
+                <img class="mjid" src="WhatsApp Image 2024-03-31 at 17.49.58_c5664d3e.jpg" alt="">
+            </div>
+
+        </section>
+
+        <section class="an">
             <div class="container2">
-                
-                <h1 class="anime">My Favorit Anime</h1>
+
                 <span class="slider" id="slider1"></span>
                 <span class="slider" id="slider2"></span>
                 <span class="slider" id="slider3"></span>
@@ -64,7 +83,8 @@
                 <div class="imgContainer">
 
                     <div class="slide_div" id="slide_1">
-                        <img src="download.jpeg" class="img" id="img1">
+                        <img src="MV5BNGY4MTg3NzgtMmFkZi00NTg5LWExMmEtMWI3YzI1ODdmMWQ1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+                            class="img" id="img1">
                         <a href="#slider1" class="button" id="button1"></a>
                     </div>
                     <div class="slide_div" id="slide_2">
@@ -96,15 +116,62 @@
             </div>
 
         </section>
-        <section id="ski">
-            <h1>Ba9i Ml9it bach n3mer🙃</h1>
+
+        <section id="ski" class="skills">
+            <div class="main-text">
+                <h1>My skills</h1>
+            </div>
+
+            <div class="skill-main row">
+
+                <div class="skill-bar ">
+                    <div class="info ">
+                        <h3>HTML</h3>
+                        <p>84%</p>
+                    </div>
+
+                </div>
+
+                <div class="skill-bar ">
+                    <div class="info" >
+                        <h3>CSS</h3>
+                        <p>56%</p>
+                    </div>
+
+                </div>
+
+                <div class="skill-bar">
+                    <div class="info ">
+                        <h3>JavaScript</h3>
+                        <p>39%</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact" id="cont">
+            <form>
+                <h1>Contact us from</h1>
+                <input type="text" id="p" name="prenome" placeholder="your FirstName">
+
+                <input type="text" id="no" name="nome" placeholder="your LastName">
+
+                <input type="email" id="e" name="email" placeholder="your email">
+
+                <input type="number" id="n" name="number" placeholder="your number" minlength="10">
+                <h4>type your message here..</h4>
+                <textarea name="type" required></textarea>
+
+                <input type="submit" value="send" id="button">
+            </form>
         </section>
     </main>
-    
     <footer>
-
+        <p>Copyright &copy; 2024 All rights reserved | Made by <b>MjidOux</b></p>
     </footer>
-    
+
 
 </body>
 
